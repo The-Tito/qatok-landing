@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#272130">
+  <meta name="description" content="Conoce QATO’K, el simulador de decisiones laborales. Explora un escenario, sus resultados y los repositorios del proyecto.">
+  <title>QATO’K · Simulador de decisiones laborales</title>
+  <link rel="icon" href="assets/student.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="site.css">
+  <script defer src="scenario.js"></script>
+</head>
+<body>
+<a class="skip" href="#principal">Saltar al contenido</a>
+<header class="wrap nav">
+  <a class="brand" href="#principal"><span class="brandmark" aria-hidden="true">Q</span>QATO’K</a>
+  <nav aria-label="Principal"><a href="#resultados">Resultados</a><a class="navcode" href="#codigo">Repositorios</a></nav>
+</header>
+<main id="principal">
+  <div class="hero wrap">
+    <section class="intro" aria-labelledby="titulo">
+      <p class="eyebrow"><i></i> Simulador laboral</p>
+      <h1 id="titulo">Tu turno<br>de <em>decidir.</em></h1>
+      <p class="lede">En QATO’K practicas cómo actuar ante situaciones de trabajo. Cada decisión deja un registro que ayuda a recomendar qué habilidad practicar después.</p>
+      <div class="actions"><a class="cta primary" href="https://github.com/The-Tito/qatok-backend"><span aria-hidden="true">{ }</span> Ver backend</a><a class="cta" href="https://github.com/The-Tito/qatok-frontend"><span aria-hidden="true">&lt;/&gt;</span> Ver frontend</a></div>
+    </section>
+    <section class="stage" aria-label="Ejemplo interactivo del escenario">
+      <div class="device">
+        <header class="devicehead"><span>QATO’K</span><span class="grille" aria-hidden="true"></span></header>
+        <div class="screen"><div class="screenbar"><span>Escenario de práctica</span><img src="assets/task.svg" alt=""></div>
+          <div class="dialog"><img class="student" src="assets/student.svg" width="96" height="96" alt=""><h2>Tres entregas<br>para mañana</h2></div>
+          <div id="scene" aria-live="polite"><p>Tienes tres tareas para las 18:00 y el tiempo no alcanza. ¿Qué haces?</p></div>
+        </div>
+        <div class="choices" aria-label="Decisiones del escenario">
+          <button type="button" data-choice="avisar"><b>A</b> Priorizar y avisar</button>
+          <button type="button" data-choice="callar"><b>B</b> Terminar todo sin avisar</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="codeband" id="codigo"><div class="wrap">
+    <p class="eyebrow"><i></i> GitHub</p><h2>El código del proyecto<span>.</span></h2>
+    <div class="repos">
+      <a href="https://github.com/The-Tito/qatok-backend"><span class="repotype">API y datos</span><h3>qatok-backend</h3><p>Escenarios en MongoDB, decisiones en PostgreSQL y progreso por habilidad en Neo4j. Incluye el contrato de la API y sus pruebas.</p><strong>Abrir backend en GitHub</strong></a>
+      <a href="https://github.com/The-Tito/qatok-frontend"><span class="repotype">Interfaz web</span><h3>qatok-frontend</h3><p>Interfaz en Next.js que conecta al estudiante con la API. Aquí se desarrolla la experiencia web del simulador.</p><strong>Abrir frontend en GitHub</strong></a>
+    </div>
+  </div></section>
+  <section class="wrap results" id="resultados">
+    <div><p class="eyebrow"><i></i> Prueba de integración</p><h2>¿Cuándo cambia la recomendación?</h2><p>En una prueba con 100 perfiles simulados, todos completaron el mismo escenario. Tras sincronizar el perfil, el resultado dependió de los niveles de gestión del tiempo y comunicación.</p></div>
+    <dl><div><dt>50/50</dt><dd>Dejó de recomendarse al alcanzar los niveles esperados.</dd></div><div><dt>50/50</dt><dd>Siguió recomendado cuando quedaban habilidades por reforzar.</dd></div></dl>
+  </section>
+</main>
+<footer><div class="wrap"><b>QATO’K</b><span>Universidad Politécnica de Chiapas · ETEIA 2026</span></div></footer>
+</body></html>
